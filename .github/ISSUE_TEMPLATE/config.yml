@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 项目主页
+    url: https://shuxin.im
+    about: 书信产品与愿景
+  - name: 讨论安全（勿在此公开漏洞细节）
+    url: https://github.com/SynSwarm/shuxin/security
+    about: 使用 Security 报告私密漏洞；一般 Bug 请用下方模板

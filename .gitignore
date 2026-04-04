@@ -1,62 +1,77 @@
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+# --- [ Cursor IDE (本地配置，不上传) ] ---
+.cursor/
 
-## User settings
+# --- [ 基础 & 系统 ] ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+Thumbs.db
+*.swp
+*.lock
+
+# --- [ 飞书 & 隐私安全 - 绝不能上传 ] ---
+.env
+.env.*
+!.env.example
+config.yaml
+config.json
+# 存放飞书 AppID/Secret 的本地凭证
+credentials/
+secrets/
+*.pem
+*.key
+
+# --- [ iOS / Swift (shuxin App) ] ---
+build/
+DerivedData/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
 xcuserdata/
-
-## Obj-C/Swift specific
-*.hmap
-
-## App packaging
-*.ipa
-*.dSYM.zip
-*.dSYM
-
-## Playgrounds
-timeline.xctimeline
-playground.xcworkspace
-
+*.xccheckout
+*.moved-aside
+*.xcscmblueprint
+*.archive
+# CocoaPods (如果你打算用)
+Pods/
 # Swift Package Manager
-#
-# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
-# Packages/
-# Package.pins
-# Package.resolved
-# *.xcodeproj
-#
-# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
-# hence it is not needed unless you have added a package configuration file to your project
-# .swiftpm
-
+.swiftpm/
 .build/
-
-# CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-# Pods/
-#
-# Add this line if you want to avoid checking in source code from the Xcode workspace
-# *.xcworkspace
-
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
-Carthage/Build/
-
 # fastlane
-#
-# It is recommended to not store the screenshots in the git repo.
-# Instead, use fastlane to re-generate the screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/#source-control
-
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# --- [ Backend / Node.js (邮局网关) ] ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+dist/
+lib-cov
+coverage/
+.nyc_output
+.eslintcache
+
+# --- [ AI & 数据 (小邮差逻辑) ] ---
+# 存放 AI 训练或测试用的临时数据
+data/*.csv
+data/*.json
+!data/sample.json
+logs/
+*.log
+
+# --- [ 视觉资产 (邮票 & 信封原稿) ] ---
+# 建议只上传导出的 png/svg，忽略 PS/Figma 等大文件
+*.psd
+*.ai
+*.fig

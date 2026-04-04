@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  metadata:
+    name: 仓库元数据检查
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: 必备文件存在
+        run: |
+          set -e
+          for f in README.md LICENSE CONTRIBUTING.md SECURITY.md CODE_OF_CONDUCT.md; do
+            if [ ! -f "$f" ]; then
+              echo "缺少: $f"
+              exit 1
+            fi
+          done
+          echo "OK"

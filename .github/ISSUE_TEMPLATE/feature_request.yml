@@ -1,0 +1,34 @@
+name: 想法与功能
+description: 产品想法、文档改进或客户端能力建议
+title: "[Idea] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        本模板用于**想法与功能**。若你更想先聊天对齐方向，也可开一个简版 Issue。
+  - type: textarea
+    id: problem
+    attributes:
+      label: 要解决什么问题？（或谁受益？）
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 你的设想（可选方案、交互、边界）
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: 你认为主要落在哪一侧？（可多选）
+      options:
+        - label: iOS 客户端（本仓库）
+        - label: 文档 / API 契约摘要
+        - label: 网关 / 后端（需维护者协调私仓）
+        - label: 不确定
+  - type: textarea
+    id: willing
+    attributes:
+      label: 你是否愿意参与实现或文档？（可选）
